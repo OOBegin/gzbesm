@@ -17,7 +17,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.gzb.esm.ios9fix</string>
+				<string>com.gzb.esm</string>
 				<key>bundle-version</key>
 				<string>1.1.7</string>
 				<key>kind</key>
