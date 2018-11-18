@@ -13,27 +13,11 @@
 					<key>url</key>
 					<string>http://192.168.43.229:8082/www/appPkg/ios/ios-release_1.1.7.ipa</string>
 				</dict>
-                                <dict>
-					<key>kind</key>
-					<string>display-image</string>
-					<key>needs-shine</key>
-					<true/>
-					<key>url</key>
-					<string>http://192.168.43.229:8082/www/appPkg/ios/icon57.png</string>
-				</dict>
-				<dict>
-					<key>kind</key>
-					<string>full-size-image</string>
-					<key>needs-shine</key>
-					<true/>
-					<key>url</key>
-					<string>http://192.168.43.229:8082/www/appPkg/ios/icon57.png</string>
-				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.gzb.esm.ios9fix</string>
+				<string>com.gzb.esm</string>
 				<key>bundle-version</key>
 				<string>1.1.7</string>
 				<key>kind</key>
