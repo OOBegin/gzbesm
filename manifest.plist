@@ -13,33 +13,15 @@
 					<key>url</key>
 					<string>https://raw.githubusercontent.com/OOBegin/gzbesm/master/ios-release_1.1.7.ipa</string>
 				</dict>
-				<dict>
-					<key>kind</key>
-					<string>display-image</string>
-					<key>needs-shine</key>
-					<true/>
-					<key>url</key>
-					<string>https://raw.githubusercontent.com/OOBegin/gzbesm/master/icon57.png</string>
-				</dict>
-				<dict>
-					<key>kind</key>
-					<string>full-size-image</string>
-					<key>needs-shine</key>
-					<true/>
-					<key>url</key>
-					<string>https://raw.githubusercontent.com/OOBegin/gzbesm/master/icon57.png</string>
-				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.gzb.esm</string>
+				<string>com.gzb.esm.ios9fix</string>
 				<key>bundle-version</key>
 				<string>1.1.7</string>
 				<key>kind</key>
 				<string>software</string>
-				<key>subtitle</key>
-				<string></string>
 				<key>title</key>
 				<string>管理驾驶舱_1.1.7</string>
 			</dict>
