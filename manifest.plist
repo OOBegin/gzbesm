@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://192.168.43.229:8082/www/appPkg/ios/iosrelease.ipa</string>
+					<string>https://raw.githubusercontent.com/OOBegin/gzbesm/master/iosrelease.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>http://192.168.43.229:8082/www/appPkg/ios/icon57.png</string>
+					<string>https://raw.githubusercontent.com/OOBegin/gzbesm/master/icon57.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>http://192.168.43.229:8082/www/appPkg/ios/icon57.png</string>
+					<string>https://raw.githubusercontent.com/OOBegin/gzbesm/master/icon57.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
