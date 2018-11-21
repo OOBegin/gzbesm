@@ -29,7 +29,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.gzb.esm</string>
+				<string>com.gzb.esm.ios82fix</string>
 				<key>bundle-version</key>
 				<string>1.1.0</string>
 				<key>kind</key>
