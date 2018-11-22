@@ -29,7 +29,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>cn.sunline.mobile</string>
+				<string>com.gzb.esm</string>
 				<key>bundle-version</key>
 				<string>1.0.1</string>
 				<key>kind</key>
