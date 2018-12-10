@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:hibernate xmlns:ns="http://www.sldt.mds.com/xml/ns/j2ee/hibernate"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.sldt.mds.com/xml/ns/j2ee/hibernate LTHibernateSchema.xsd">
+
+    <statement id="queryAllRptDrill">
+		SELECT ETL_DATE        AS  ELDT,
+               INDEX_NUM       AS  IXNM,
+               CRCY_CD         AS  CYCD,
+               INDEX_FREQ      AS  IXFQ,
+               BRCH_NO         AS  BRCH,
+               INDEX_VAL       AS  IXVL,
+               INDEX_LST_D_VAL AS  IXDV,
+               INDEX_LST_M_VAL AS  IXMV,
+               INDEX_LST_Q_VAL AS  IXQV,
+               INDEX_LST_Y_VAL AS  IXYV,
+               INDEX_LST_P_VAL AS  IXPV 
+		 FROM INX_KPI_VAL_TEST 
+	</statement>
+	
+    <statement id="queryFdmBaseTablByTablcd">
+		SELECT TABLCD,
+               TABLNA,
+               TABLDS,
+               GRUPID,
+               STATUS,
+               ISMGTB
+		 FROM FDM_BASE_TABL tabl
+		WHERE 1=1 
+		<dynamic-field property="tablcd">
+		    AND tabl.TABLCD = #tablcd#
+		</dynamic-field>
+	</statement>
+
+    <statement id="queryFdmBaseFildByTablcd">
+		SELECT TABLCD      ,
+               TABCOL      ,
+               COLMNA      ,
+               COLMDS      ,
+               ISCLPK      ,
+               DATATP      ,
+               EDTWGT      ,
+               VALDTP      ,
+               DATAFM      ,
+               ISSRCH      ,
+               ISLIST      ,
+               ISEDIT      ,
+               AUTOGN      ,
+               SCHCDN      ,
+               CLWDTH      ,
+               SHWODR      ,
+               ODRMOD      ,
+               VALEXP      ,
+               CANEDT      ,
+               COLLEN      
+         FROM FDM_BASE_FILD fild    
+	    WHERE 1=1 
+		<dynamic-field property="tablcd">
+		    AND fild.TABLCD = #tablcd# 
+		</dynamic-field>
+		<!-- 按照显示的顺序排序 -->
+		ORDER BY fild.SHWODR ASC
+	</statement>
+</ns:hibernate>
