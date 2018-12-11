@@ -2,26 +2,26 @@ package com.sldt.rpt.bip.uicserv.entity;
 
 public class FdmBaseFild implements java.io.Serializable{
 	
-	private String tablcd;//表代码
-	private String tabcol;//字段映射代码
-	private String colmna;//字段名称
-    private String colmds;//字段中文名
-    private String isclpk;//是否主键  1:是 0:否
-    private String datatp;//数据类型DATE  STRING
-    private String edtwgt;//编辑控件DATE  TEXT  SELECT
-    private String valdtp;//验证类型REQUIRED
-    private String datafm;//数据格式
-    private String issrch;//是否显示在查询 1:是 0:否
-    private String islist;//是否显示在数据列表 1:是 0:否
-    private String isedit;//是否显示在编辑 1:是 0:否
-    private String autogn;//自动生成值函数
-    private String schcdn;//查询模式
-    private String clwdth;//列表宽度
-    private String shwodr;//显示序号
-    private String odrmod;//排序模式
-    private String valexp;//特殊正则表达式
-    private String canedt;//是否可编辑
-    private String collen;//字段长度
+	private String tablcd;//表代码                                       必填
+	private String tabcol;//字段映射代码                                 别名 必填
+	private String colmna;//字段名称                                     字段名 必填
+    private String colmds;//字段中文名                                   必填
+    private String isclpk;//是否主键  1:是 0:否                          非必填
+    private String datatp;//数据类型DATE  STRING                         必填
+    private String edtwgt;//编辑控件DATE  TEXT  SELECT                   必填
+    private String valdtp;//验证类型REQUIRED                             非必填
+    private String datafm;//数据格式                                     必填
+    private String issrch;//是否显示在查询 1:是 0:否                      必填
+    private String islist;//是否显示在数据列表 1:是 0:否                  必填
+    private String isedit;//是否显示在编辑 1:是 0:否                      非必填
+    private String autogn;//自动生成值函数                                非必填
+    private String schcdn;//查询模式                                      非必填
+    private String clwdth;//列表宽度                                      必填
+    private String shwodr;//显示序号                                      必填
+    private String odrmod;//排序模式                                      必填
+    private String valexp;//特殊正则表达式                                非必填
+    private String canedt;//是否可编辑                                    非必填
+    private String collen;//字段长度                                      非必填 
     
 	public String getTablcd() {
 		return tablcd;

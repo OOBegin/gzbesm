@@ -60,7 +60,7 @@
                 <value>sqlxml/oracle/dmc_rpt_tabcenter_sql.xml</value>
                 <value>sqlxml/oracle/dmc_tableau_sql.xml</value>
                 <value>sqlxml/oracle/dmc_cognos_sql.xml</value>
-                <value>sqlxml/oracle/dmc_drill_rpt_list_sql.xml</value>
+                <value>sqlxml/oracle/dmc_drill_rpt_query_sql.xml</value>
 			</list>
 		</property>
 	</bean>

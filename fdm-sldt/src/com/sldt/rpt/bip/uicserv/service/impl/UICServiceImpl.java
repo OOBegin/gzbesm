@@ -9,7 +9,6 @@ import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,8 +19,8 @@ import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.streaming.SXSSFRow;
+import org.apache.poi.xssf.streaming.SXSSFSheet;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipOutputStream;
@@ -38,7 +37,6 @@ import com.sldt.rpt.bip.uicserv.util.UICServiceUtil;
 
 @Service("uicService")
 public class UICServiceImpl implements UICService {
-
 	@Resource(name="uicServiceDao")
 	private IUICServiceDao dao;
 	
@@ -145,7 +143,7 @@ public class UICServiceImpl implements UICService {
 //				String[] assetNameTemp = {"ELDT","IXNM","CYCD" ,"IXFQ","BRCH","IXVL","IXDV","IXMV","IXQV","IXYV","IXPV"};
 				
 				//绘制表头
-				Sheet sheet = null;
+				SXSSFSheet sheet = null;
 				CellStyle columnHeadStyle = wb.createCellStyle();
 				columnHeadStyle.setBorderBottom(HSSFCellStyle.BORDER_THIN);// 下边框
 				columnHeadStyle.setBorderLeft(HSSFCellStyle.BORDER_THIN);// 左边框
@@ -159,10 +157,10 @@ public class UICServiceImpl implements UICService {
 				f.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);//BOLDWEIGHT_BOLD);// 加粗
 				columnHeadStyle.setFont(f);
 				
-				Row row;
+				SXSSFRow row;
 				Cell cell;
-				sheet = wb.createSheet("sheet");
-				row = sheet.createRow(0);
+				sheet = (SXSSFSheet) wb.createSheet("sheet");
+				row = (SXSSFRow) sheet.createRow(0);
 				sheet.createFreezePane(0, 1, 0, 1);
 				for(int i=0;i< assetHeadTemp.length;i++){
 					cell = row.createCell(i);
@@ -175,7 +173,7 @@ public class UICServiceImpl implements UICService {
 				if(res != null && res.size() > 0){
 					int rowIndex = 1;
 					for(Map<String, Object> map : res){
-						row = sheet.createRow(rowIndex ++);
+						row = (SXSSFRow) sheet.createRow(rowIndex ++);
 						int index = 0;
 	//					Map<String, Object> obj = null;
 						for(int i =0; i < assetNameTemp.length; i ++){

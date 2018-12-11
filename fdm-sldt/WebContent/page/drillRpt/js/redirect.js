@@ -100,9 +100,9 @@ function updatePagerIcons(table) {
 	});
 }
 
-
 //导出Excel
 var doExport = function(){
+	var str = queryString.replace(/queryDrillRpt/g,"downloadDrillRpt");
 	//禁用点击按钮
 	var downBtn = document.getElementById("downBtn");
 	downBtn.setAttribute("disabled",true);
@@ -111,35 +111,39 @@ var doExport = function(){
 	var submitForm = document.createElement("FORM");
 	submitForm.setAttribute('style','display:none');
 	submitForm.setAttribute('target','');
+	submitForm.setAttribute('id','submitFormId');
 	submitForm.setAttribute('method','post');
-	submitForm.setAttribute('action',context+'/drillRpt.do?method=downloadDrillRpt');
+	submitForm.setAttribute('action',context+'/drillRpt.do?' + str);
 	
-	var inputPara = document.createElement("INPUT");
+	/*var inputPara = document.createElement("INPUT");
 	inputPara.setAttribute('type','hidden');
 	inputPara.setAttribute('name','queryString');
 	inputPara.setAttribute('value',queryString);
-	submitForm.append(inputPara);
+	submitForm.appendChild(inputPara);*/
 	
 	var cookie = document.createElement("INPUT");
 	cookie.setAttribute("type","hidden");
 	cookie.setAttribute("name","cookieKey");
 	cookie.setAttribute("value",cookieKey);
-	submitForm.append(cookie);
+	submitForm.appendChild(cookie);
 	
-	document.getElementById("alertFormId").append(submitForm);
+	document.getElementById("alertFormId").appendChild(submitForm);
+	
 	submitForm.submit();
-//	downBtn.removeAttribute("disabled");
 	
-	getCookie(cookieKey);
-}
+	window.setTimeout(function(){getCookie(cookieKey);}, 1000);
+};
 
 function getCookie(cookieKey){
 	var downBtn = document.getElementById("downBtn");
+	console.log(cookieKey);
 	$.ajax({
 		url: context+'/drillRpt.do?method=getCookie',
 		type: 'POST',
 		dataType: 'json',
 		data: {cookieKey:cookieKey},
+		async:false,
+		cache:false,
 		success:function(msg){
 			if(msg.success){
 				//1.释放导出按钮,清除置灰效果
@@ -152,6 +156,7 @@ function getCookie(cookieKey){
 	});
 };
 
+//生成唯一标识
 function guid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);

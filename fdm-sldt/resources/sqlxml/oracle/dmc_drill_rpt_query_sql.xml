@@ -53,7 +53,7 @@
                VALEXP      ,
                CANEDT      ,
                COLLEN      
-         FROM FDM_BASE_FILD fild    
+         FROM FDM_BASE_FILD fild 
 	    WHERE 1=1 
 		<dynamic-field property="tablcd">
 		    AND fild.TABLCD = #tablcd# 

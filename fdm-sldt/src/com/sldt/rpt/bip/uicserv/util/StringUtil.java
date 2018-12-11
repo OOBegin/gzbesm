@@ -6,7 +6,7 @@ import java.util.Map;
 public class StringUtil {
 	
 	/**
-	 * 判断字符串是否为空或者null
+	 * 鍒ゆ柇瀛楃涓叉槸鍚︿负绌烘垨鑰卬ull
 	 * @param str
 	 * @return
 	 */
@@ -32,7 +32,7 @@ public class StringUtil {
 	}
 	
 	/**
-	 * 判断对象是否为空或者null
+	 * 鍒ゆ柇瀵硅薄鏄惁涓虹┖鎴栬�卬ull
 	 * @param obj
 	 * @return
 	 */
