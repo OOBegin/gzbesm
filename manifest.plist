@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://132.232.35.152:8080/www/appPkg/ios/ios_1.0.1-release.ipa</string>
+					<string>http://132.232.35.152:8080/www/appPkg/ios/ios_1.1.0-release.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -31,11 +31,11 @@
 				<key>bundle-identifier</key>
 				<string>com.gzb.esm</string>
 				<key>bundle-version</key>
-				<string>1.0.1</string>
+				<string>1.1.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>管理驾驶舱_1.0.1</string>
+				<string>管理驾驶舱_1.1.0</string>
 			</dict>
 		</dict>
 	</array>
